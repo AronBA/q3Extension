@@ -6,5 +6,5 @@ This extension includes:
 - Tokenization for Q3
 - Q3 Theme for VS Code and Syntax Highliting
 
-## Source
+## Sourceg
 https://github.com/AronBA/Q3Extension
