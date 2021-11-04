@@ -644,14 +644,15 @@
 			}
 		},
 		{
-			"name": "MCDataTypes",
+			"name": "Enums",
 			"scope": [
-				"McDatatypes"
+				"Enums"
 			],
 			"settings": {
 				"foreground": "#da90fc"
 			}
 			
 		}
+		
 	]
 }

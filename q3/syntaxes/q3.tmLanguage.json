@@ -6,13 +6,13 @@
 			"include": "#comments"
 		},
 		{
+			"include": "#variable"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
-			"include": "#datatypes"
-		},
-		{
-			"include": "#McDatatypes"
+			"include": "#Enums"
 		},
 		{
 			"include": "#Q3Functions"
@@ -27,25 +27,18 @@
 			"include": "#strings"
 		}
 		
-		
 	],
 	"repository": {
-		"datatypes":{
-			"patterns": [{
-				"name":"datatypes.q3",
-				"match": "\\b(true|false)\\b"
-			}]
-		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.q3",
-				"match": "\\b(if|else|while|for|return|foreach|break|continue)\\b"
+				"match": "\\b(class|enum|extends|if|else|while|do|for|break|continue|return|throw|sleep|instanceof|wait|key|nf|want|fork|null|true|false|this|ctask|match|case|default|try|catch|finally|static|public|private|protected|const|abstract|final)\\b"
 			}]
 		},
-		"McDatatypes": {
+		"Enums": {
 			"patterns": [{
-				"name": "McDatatypes.q3",
-				"match": "\\b(Block|Loc|Entity|M|Item|Tiles|W|Events|Sound)\\b"
+				"name": "Enums.q3",
+				"match": "\\b(Achievement|ActiveEffect|AnvilActionType|AttachedFace|Axis|AxolotlType|BarColor|BarFlag|BarStyle|BeeContainerType|BellAttachment|Block|BossBar|Box|catType|ChestAttachement|Color|ComparatorMode|ConsoleSender|DamageCause|DragonPhase|DripleafTilt|DripstoneThickness|Effect|Enchant|Face|FoxType|FurnanceType|GameMode|HeadType|HorseColor|HorseStyle|IllagerSpell|Inventory|ItemFlag|JobType|LlamaType|Loc|LogginLevel|MooshroomType|MouseKey|MushroomBlockType|PaintingType|PandaGene|ParrotType|Particle|Pattern|PatternType|PermissionLevel|PickupPolicy|PlayerJob|PlayerProfile|PotionType|PriveCalculator|QuickFlashEvent|RabbitType|RailShape|RegionFlag|RegionOwnerRole|RegionType|ReloadFilesEvent|RestartServiceEvent|Rotation|Scroll|Sex|SharedBalance|SidebarModule|Skill|SkillType|SlabType|Sound|StairShape|ToolType|TropicalFishPattern|VillagerProfession|WoodType|Item)\\b"
 			}]
 		},
 		"Q3Functions": {
@@ -81,9 +74,6 @@
 		"comments": {
 			"patterns": [
 				{
-					"include": "#comments-block"
-				},
-				{
 					"captures": {
 						"1": {
 							"name": "comment.line.double-slash.q3"
@@ -92,8 +82,7 @@
 					"match": "((#).*)$"
 				}
 			]
-		}
-		
+		}		
 	},
 	"scopeName": "source.q3"
 }
