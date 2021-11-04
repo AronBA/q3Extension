@@ -11,6 +11,12 @@
         "Themes"
     ],
     "contributes": {
+        "snippets": [
+            {
+              "language": "q3",
+              "path": "./snippets/q3-snippets.json"
+            }
+          ],
         "themes": [ 
             {
                 "label": "q3",
