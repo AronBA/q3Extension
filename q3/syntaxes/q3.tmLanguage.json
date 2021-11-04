@@ -33,7 +33,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.q3",
-				"match": "\\b(if|else|while|for|return|foreach|break|continue|makeProgress)\\b"
+				"match": "\\b(if|else|while|for|return|foreach|break|continue)\\b"
 			}]
 		},
 		"McDatatypes": {
@@ -45,7 +45,7 @@
 		"Q3Functions": {
 			"patterns": [{
 				"name": "q3.functions.q3",
-				"match": "\\b(npc|p|ps|region|setSidebarMsg|talk|answer|setDeadline|sleep|online|giveItem|checkCollab|sendInfo|waitUntilNearby|npc.acceptItem|waitAsync|thenApply|listen|repeat|delay|waitAll|waitAny|nfAll|nfAny|rndOffsetLoc|QResult)\\b"
+				"match": "\\b(npc|p|ps|region|setSidebarMsg|talk|answer|setDeadline|sleep|online|giveItem|checkCollab|sendInfo|waitUntilNearby|npc.acceptItem|waitAsync|thenApply|listen|repeat|delay|waitAll|waitAny|nfAll|nfAny|rndOffsetLoc|QResult|makeProgress)\\b"
 			}]
 		},
 		"Q3EventClasses": {
