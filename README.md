@@ -1,7 +1,8 @@
 # Q3 Extension
-
-<div style="float: right;"><img src="samplecode.png" alt="logo" width="300" ></div>
-
+ <img align="right" src="samplecode.png" width="300" />
+ 
+## Features
+VS Code Extension for Q3 Language Support and Syntax highlighting
 ## How to install
 
 - Download or Clone the Project
