@@ -1,5 +1,7 @@
 # Q3 Extension
 
+<div style="float: right;"><img src="samplecode.png" alt="logo" width="300" ></div>
+
 ## How to install
 
 - Download or Clone the Project
