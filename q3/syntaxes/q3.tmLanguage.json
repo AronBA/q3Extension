@@ -32,7 +32,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.q3",
-				"match": "\\b(class|enum|extends|if|else|while|do|for|break|continue|return|throw|sleep|instanceof|wait|key|nf|want|fork|null|true|false|this|ctask|match|case|default|try|catch|finally|static|public|private|protected|const|abstract|final)\\b"
+				"match": "\\b(class|enum|extends|if|else|while|do|for|foreach|break|continue|return|throw|sleep|instanceof|wait|key|nf|want|fork|null|true|false|this|ctask|match|case|default|try|catch|finally|static|public|private|protected|const|abstract|final)\\b"
 			}]
 		},
 		"Enums": {

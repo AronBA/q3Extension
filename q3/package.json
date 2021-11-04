@@ -1,8 +1,9 @@
 {
-    "name": "q3",
-    "displayName": "q3",
-    "description": "color theme for q3",
-    "version": "0.0.1",
+    "name": "Q3 (Syntax Highlighting)",
+    "displayName": "Q3 (Syntax Highlighting)",
+    "description": "Syntax highlighting for Q3 and nothing else.",
+    "version": "1.0.0",
+    "icon":"logo.png",
     "engines": {
         "vscode": "^1.61.0"
     },
