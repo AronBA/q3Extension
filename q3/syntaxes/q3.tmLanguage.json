@@ -3,6 +3,9 @@
 	"name": "q3",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -16,6 +19,9 @@
 		},
 		{
 			"include": "#Q3EventClasses"
+		},
+		{
+			"include": "#int"
 		},
 		{
 			"include": "#strings"
@@ -45,7 +51,7 @@
 		"Q3Functions": {
 			"patterns": [{
 				"name": "q3.functions.q3",
-				"match": "\\b(npc|p|ps|region|setSidebarMsg|talk|answer|setDeadline|sleep|online|giveItem|checkCollab|sendInfo|waitUntilNearby|npc.acceptItem|waitAsync|thenApply|listen|repeat|delay|waitAll|waitAny|nfAll|nfAny|rndOffsetLoc|QResult|makeProgress)\\b"
+				"match": "\\b(npc|p|ps|region|setSidebarMsg|talk|answer|setDeadline|sleep|online|giveTempItem|giveItem|checkCollab|sendInfo|waitUntilNearby|npc.acceptItem|waitAsync|thenApply|listen|repeat|delay|waitAll|waitAny|nfAll|nfAny|rndOffsetLoc|QResult|makeProgress)\\b"
 			}]
 		},
 		"Q3EventClasses": {
@@ -64,7 +70,30 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"int": {
+			"patterns": [{
+				"name": "constant.numeric.q3",
+				"match": "(?<!\\$)\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b(?!\\$)"
+			}]
+			
+		},
+		"comments": {
+			"patterns": [
+				{
+					"include": "#comments-block"
+				},
+				{
+					"captures": {
+						"1": {
+							"name": "comment.line.double-slash.q3"
+						}
+					},
+					"match": "((#).*)$"
+				}
+			]
 		}
+		
 	},
 	"scopeName": "source.q3"
 }

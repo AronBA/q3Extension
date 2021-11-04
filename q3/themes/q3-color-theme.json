@@ -135,7 +135,7 @@
 				"keyword.other"
 			],
 			"settings": {
-				"foreground": "#F78C6C"
+				"foreground": "#c7f9ff"
 			}
 		},
 		{
@@ -649,7 +649,7 @@
 				"McDatatypes"
 			],
 			"settings": {
-				"foreground": "#d270ff"
+				"foreground": "#da90fc"
 			}
 			
 		}
