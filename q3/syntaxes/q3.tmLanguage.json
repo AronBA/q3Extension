@@ -1,0 +1,70 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "q3",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#datatypes"
+		},
+		{
+			"include": "#McDatatypes"
+		},
+		{
+			"include": "#Q3Functions"
+		},
+		{
+			"include": "#Q3EventClasses"
+		},
+		{
+			"include": "#strings"
+		}
+		
+		
+	],
+	"repository": {
+		"datatypes":{
+			"patterns": [{
+				"name":"datatypes.q3",
+				"match": "\\b(true|false)\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.q3",
+				"match": "\\b(if|else|while|for|return|foreach|break|continue|makeProgress)\\b"
+			}]
+		},
+		"McDatatypes": {
+			"patterns": [{
+				"name": "McDatatypes.q3",
+				"match": "\\b(Block|Loc|Entity|M|Item|Tiles|W|Events|Sound)\\b"
+			}]
+		},
+		"Q3Functions": {
+			"patterns": [{
+				"name": "q3.functions.q3",
+				"match": "\\b(npc|p|ps|region|setSidebarMsg|talk|answer|setDeadline|sleep|online|giveItem|checkCollab|sendInfo|waitUntilNearby|npc.acceptItem|waitAsync|thenApply|listen|repeat|delay|waitAll|waitAny|nfAll|nfAny|rndOffsetLoc|QResult)\\b"
+			}]
+		},
+		"Q3EventClasses": {
+			"patterns": [{
+				"name": "EventClasses.q3",
+				"match": "\\b(AnvilEnchant|BedEnter|BedEnterS|BlockBreak|BlockbreakS|BlockClick|BlockClickS|BlockPlace|BlockPlaceS|BucketEmpty|BucketEmtpyS|BucketFill|BucketFillS|EntityClick|EntityClickS|EntityDamage|EntityDamageS|EntityDeath|EntityDeathS|Event|ItemDrop|ItemDropS|PlayerChat|PlayerChatS|PlayerCraft|PlayerEatS|PlayerEat|PlayerJoin|PlayerPermsChange|PlayerQuit|PlayerTeleport|PlayerTeleportS|ProjectileHit|ProjectileHitS|ScrollUse|ScrollUseS|Tick|TickS)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.q3",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.q3",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.q3"
+}

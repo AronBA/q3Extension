@@ -1,0 +1,32 @@
+{
+    "name": "q3",
+    "displayName": "q3",
+    "description": "color theme for q3",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [ 
+            {
+                "label": "q3",
+                "uiTheme": "vs-dark",
+                "path": "./themes/q3-color-theme.json"
+            }
+        ],
+        "languages": [{
+            "id": "q3",
+            "aliases": ["q3", "q3"],
+            "extensions": ["q3"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "q3",
+            "scopeName": "source.q3",
+            "path": "./syntaxes/q3.tmLanguage.json"
+        }]
+    }
+}
