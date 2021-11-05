@@ -13,7 +13,10 @@ All notable changes to the "q3" extension will be documented in this file.
 - added Comments, Enuf, events
 - updated ReadMe, Icon and more
 
+### 1.1.0
+
+- added Q3 Snippets
+
 ## [unreleased]
 
-- Q3 Snippet Support
 - Syntax Support for variables, globalvariables and functions

@@ -1,8 +1,8 @@
 {
     "name": "Q3 (Syntax Highlighting)",
     "displayName": "Q3 (Syntax Highlighting)",
-    "description": "Syntax highlighting for Q3 and nothing else.",
-    "version": "1.0.0",
+    "description": "Syntax highlighting for Q3 and Snippets.",
+    "version": "1.1.0",
     "icon":"logo.png",
     "engines": {
         "vscode": "^1.61.0"

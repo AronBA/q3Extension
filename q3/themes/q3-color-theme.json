@@ -76,7 +76,7 @@
 				"keyword.other.substitution"
 			],
 			"settings": {
-				"foreground": "#d63621"
+				"foreground": "#eb7262"
 			}
 		},
 		{
@@ -135,7 +135,7 @@
 				"keyword.other"
 			],
 			"settings": {
-				"foreground": "#c7f9ff"
+				"foreground": "#aaf7ff"
 			}
 		},
 		{
@@ -649,7 +649,7 @@
 				"Enums"
 			],
 			"settings": {
-				"foreground": "#da90fc"
+				"foreground": "#e1adfa"
 			}
 			
 		}
