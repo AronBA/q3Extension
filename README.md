@@ -5,8 +5,8 @@
 VS Code Extension for Q3 Language Support and Syntax highlighting
 ## How to install
 
-- Download or Clone the Project
-- Put the Q3 Folder in your VS Code extension Folder (should be %userprofile%/.vscode/extensions on Windows)
-- Restart VS Code
-- Change the color theme to q3 (File > Prefrences > Color Themes > q3)
-
+Download the extension from the Vs Code Extensions explorer 
+### or
+Download the vsix file from this project and put in in your %userprofile%/.vscode/extensions folder.
+### or
+Download the extension from the Extension Markedplace
