@@ -1,8 +1,8 @@
 {
 	"name": "Q3-Neostralis",
 	"displayName": "Q3 (Syntax Highlighting)",
-	"description": "Syntax highlighting for Q3 and Snippets.",
-	"version": "1.1.0",
+	"description": "Syntax highlighting for Q3.",
+	"version": "1.2.0",
 	"publisher": "GreenWylf",
 	"icon": "logo.png",
 	"repository": {
@@ -13,15 +13,10 @@
 		"vscode": "^1.61.0"
 	},
 	"categories": [
-		"Themes"
+		"Themes",
+		"Programming Languages"
 	],
 	"contributes": {
-		"snippets": [
-			{
-				"language": "q3",
-				"path": "./snippets/q3-snippets.json"
-			}
-		],
 		"themes": [
 			{
 				"label": "q3",
@@ -32,14 +27,13 @@
 		"languages": [
 			{
 				"id": "q3",
-				"aliases": [
-					"q3",
-					"q3"
-				],
 				"extensions": [
+					".q3"
+				],
+				"aliases": [
 					"q3"
 				],
-				"configuration": "./language-configuration.json"
+				"configuration": "./configurations/q3-language-configuation.json"
 			}
 		],
 		"grammars": [
@@ -54,6 +48,6 @@
 		"id": "105c85ea-7607-4166-82d6-218e70e807cf",
 		"publisherId": "1878fc36-82c9-42c6-b269-5f63fac51785",
 		"publisherDisplayName": "GreenWylf",
-		"installedTimestamp": 1636451345706
+		"installedTimestamp": 1636462576209
 	}
 }

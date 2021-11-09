@@ -17,6 +17,12 @@ All notable changes to the "q3" extension will be documented in this file.
 
 - added Q3 Snippets
 
+### 1.2.0
+
+- removed snippets
+- fixed closing brackets 
+
 ## [unreleased]
 
 - Syntax Support for variables, globalvariables and functions
+- Update Snippets
