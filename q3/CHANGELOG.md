@@ -22,7 +22,10 @@ All notable changes to the "q3" extension will be documented in this file.
 - removed snippets
 - fixed closing brackets 
 
+### 1.3.0
+
+- updated quest functions
+
 ## [unreleased]
 
-- Syntax Support for variables, globalvariables and functions
-- Update Snippets
+- functions support

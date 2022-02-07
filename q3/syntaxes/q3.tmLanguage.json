@@ -44,7 +44,7 @@
 		"Q3Functions": {
 			"patterns": [{
 				"name": "q3.functions.q3",
-				"match": "\\b(npc|p|ps|region|setSidebarMsg|talk|answer|setDeadline|sleep|online|giveTempItem|giveItem|checkCollab|sendInfo|waitUntilNearby|npc.acceptItem|waitAsync|thenApply|listen|repeat|delay|waitAll|waitAny|nfAll|nfAny|rndOffsetLoc|QResult|makeProgress)\\b"
+				"match": "\\b(npc|p|ps|region|setSidebarMsg|talk|answer|setDeadline|sleep|online|giveTempItem|giveItem|checkCollab|sendInfo|waitUntilNearby|npc.acceptItem|waitAsync|thenApply|listen|repeat|delay|waitAll|waitAny|nfAll|nfAny|rndOffsetLoc|QResult|makeProgress|talkBetweenNpcs|think|waitUntilFar|tp|setRespawnPoint|setTracker)\\b"
 			}]
 		},
 		"Q3EventClasses": {
