@@ -1,7 +1,7 @@
 # Q3 Extension
 
 VS Code Extension for Q3 Language Support and Syntax highlighting.
-If there are any problems write an Issue in this reposetory.
+If there are any problems write an Issue in this repository.
  
 # Features
 This Extensions adds the q3 Theme into VS Code. It highlights following things:
