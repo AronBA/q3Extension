@@ -7,7 +7,7 @@ If there are any problems write an Issue in this repository.
 This Extensions adds the q3 Theme into VS Code. It highlights following things:
 
 - Keywords like if
-- ENMUS from the Minecraft API like Item
+- ENUMS from the Minecraft API like Item
 - Q3 Quest functions like Talk
 - Event Classes like BlockClick
 - Strings
