@@ -1,5 +1,5 @@
 # Q3 Extension
-
+ [![Screenshot #1.2](img/sco1.png)](img/sco1.png)
 VS Code Extension for Q3 Language Support and Syntax highlighting.
 If there are any problems write an Issue in this repository.
  
