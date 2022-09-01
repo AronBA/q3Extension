@@ -1,5 +1,5 @@
 # Q3 Extension
-![logo](img/syntax.jpg)
+![logo](img/syntax.png)
 <br>
 VS Code Extension for Q3 Language Support and Syntax highlighting.
 If there are any problems write an Issue in this repository.
