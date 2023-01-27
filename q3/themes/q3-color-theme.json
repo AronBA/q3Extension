@@ -2,7 +2,7 @@
 	"name": "q3",
 	"type": "dark",
 	"colors": {
-		"editor.background": "#1d1d1d",
+		"editor.background": "#282c34",
 		"editor.foreground": "#ffffff",
 		"activityBarBadge.background": "#007acc",
 		"sideBarTitle.foreground": "#bbbbbb"
@@ -26,7 +26,7 @@
 				"string constant.other.placeholder"
 			],
 			"settings": {
-				"foreground": "#EEFFFF"
+				"foreground": "#a7ffff"
 			}
 		},
 		{
@@ -54,6 +54,7 @@
 				"keyword",
 				"storage.type",
 				"storage.modifier"
+			
 			],
 			"settings": {
 				"foreground": "#C792EA"
@@ -73,7 +74,7 @@
 				"punctuation.definition.tag.end.html",
 				"punctuation.section.embedded",
 				"keyword.other.template",
-				"keyword.other.substitution"
+				"keyword.other.substitution",
 			],
 			"settings": {
 				"foreground": "#eb7262"
@@ -94,7 +95,7 @@
 			"name": "Function, Special Method",
 			"scope": [
 				"entity.name.function",
-				"meta.function-call",
+				"meta.function",
 				"variable.function",
 				"support.function",
 				"keyword.other.special-method"
@@ -106,7 +107,9 @@
 		{
 			"name": "Block Level Variables",
 			"scope": [
-				"meta.block variable.other"
+				"meta.block variable.other",
+				"variable.other",
+				"meta.block"
 			],
 			"settings": {
 				"foreground": "#f07178"
@@ -628,7 +631,7 @@
 		{
 			"name": "Q3Functions",
 			"scope": [
-				"q3.functions"
+				"support.function.quests.q3"
 			],
 			"settings": {
 				"foreground": "#fde79c"
@@ -637,7 +640,7 @@
 		{
 			"name": "EventClasses",
 			"scope": [
-				"EventClasses"
+				"support.class.mc.events.q3"
 			],
 			"settings": {
 				"foreground": "#ffbb00"
@@ -646,13 +649,12 @@
 		{
 			"name": "Enums",
 			"scope": [
-				"Enums"
+				"support.type.mc.q3"
 			],
 			"settings": {
 				"foreground": "#e1adfa"
 			}
 			
 		}
-		
 	]
 }
