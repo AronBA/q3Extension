@@ -16,10 +16,10 @@
 					"include": "#comments"
 				},
 				{
-					"include": "#variable"
+					"include": "#keywords"
 				},
 				{
-					"include": "#keywords"
+					"include": "#class"
 				},
 				{
 					"include": "#int"
@@ -42,18 +42,15 @@
 			]
 		},
 		"libs": {
-			"patterns": [
+			"patterns":[
 				{
 					"include": "#mc.enums"
-				},
-				{
-					"include": "#mc.events.classes"
 				},
 				{
 					"include": "#quests.functions"
 				}
 			]
-		}, 
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.q3",
@@ -98,7 +95,12 @@
 			"begin": "([A-Za-z_][\\w$]*)\\s*(\\()",
 			"beginCaptures": {
 				"1": {
-					"name": "entity.name.function.q3"
+					"name": "entity.name.function.q3",
+					"patterns": [
+						{
+							"include": "#quests.functions"
+						}
+					]
 				},
 				"2": {
 					"name": "punctuation.definition.parameters.begin.bracket.round.q3"
@@ -124,12 +126,15 @@
 			]
 		},
 		"function-member": {
-			"begin": "(\\$[A-Za-z_][\\w$]*)\\s*(\\()",
+			"begin": "(\\$)([A-Za-z_][\\w$]*)\\s*(\\()",
 			"beginCaptures": {
 				"1": {
-					"name": "variable.other.q3"
+					"name": "keyword.operator.q3"
 				},
 				"2": {
+					"name": "entity.name.function.q3"
+				},
+				"3": {
 					"name": "punctuation.definition.parameters.begin.bracket.round.q3"
 				}
 			},
@@ -142,7 +147,42 @@
 			"name": "meta.function.q3",
 			"patterns": [
 				{
+					"include": "#code"
+				}
+			]
+		},
+		"class": {
+			"begin": "(class!?|enum)?\\s+([A-Z][\\w$]*)\\s*(\\()",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.q3"
+				},
+				"2": {
+					"name": "entity.name.class.q3",
+					"patterns": [
+						{
+							"include": "#mc.events.classes"
+						}
+					]
+				},
+				"3": {
+					"name": "punctuation.definition.parameters.begin.bracket.round.q3"
+				}
+			},
+			"end": "\\)",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.parameters.end.bracket.round.q3"
+				}
+			},
+			"name": "meta.type.name.q3",
+			"patterns": [
+				{
 					"include": "#constructor-parameters"
+				},
+				{
+					"name": "variable.parameter.q3",
+					"match": "[a-z_]+"
 				},
 				{
 					"include": "#code"
@@ -151,7 +191,7 @@
 		},
 		"member-variables": {
 			"match": "((@)[A-Za-z_$][\\w$]*)",
-			"name": "variable.language.q3"
+			"name": "variable.other.q3"
 		},
 		"constructor-parameters": {
 			"name": "variable.parameter.q3",
@@ -161,7 +201,6 @@
 			"name": "keyword.operator.q3",
 			"match": "(\\$|\\@|\\+|\\-|\\*|\\/|\\%|=|\\+\\=|\\-\\=|\\*\\=|\\/\\=|\\%\\=|<<=|>>=|>>>=|&=|\\|=|\\^=|!|==|\\\"=|\\|\\||&&|\\||&|\\^|~|<|>|<=|>=|=>|!=>|->|>>|>>>|<<|\\?|:|_)"
 		},
-
 		"mc.enums": {
 			"patterns": [{
 				"name": "support.type.mc.q3",
