@@ -2,7 +2,7 @@
 	"name": "q3",
 	"type": "dark",
 	"colors": {
-		"editor.background": "#1d1d1d",
+		"editor.background": "#282c34",
 		"editor.foreground": "#ffffff",
 		"activityBarBadge.background": "#007acc",
 		"sideBarTitle.foreground": "#bbbbbb"
@@ -26,7 +26,7 @@
 				"string constant.other.placeholder"
 			],
 			"settings": {
-				"foreground": "#EEFFFF"
+				"foreground": "#a7ffff"
 			}
 		},
 		{
@@ -54,6 +54,7 @@
 				"keyword",
 				"storage.type",
 				"storage.modifier"
+			
 			],
 			"settings": {
 				"foreground": "#C792EA"
@@ -73,7 +74,7 @@
 				"punctuation.definition.tag.end.html",
 				"punctuation.section.embedded",
 				"keyword.other.template",
-				"keyword.other.substitution"
+				"keyword.other.substitution",
 			],
 			"settings": {
 				"foreground": "#eb7262"
@@ -94,7 +95,7 @@
 			"name": "Function, Special Method",
 			"scope": [
 				"entity.name.function",
-				"meta.function-call",
+				"meta.function",
 				"variable.function",
 				"support.function",
 				"keyword.other.special-method"
@@ -106,7 +107,9 @@
 		{
 			"name": "Block Level Variables",
 			"scope": [
-				"meta.block variable.other"
+				"meta.block variable.other",
+				"variable.other",
+				"meta.block"
 			],
 			"settings": {
 				"foreground": "#f07178"
@@ -179,31 +182,6 @@
 			}
 		},
 		{
-			"name": "CSS Class and Support",
-			"scope": [
-				"source.css support.type.property-name",
-				"source.sass support.type.property-name",
-				"source.scss support.type.property-name",
-				"source.less support.type.property-name",
-				"source.stylus support.type.property-name",
-				"source.postcss support.type.property-name"
-			],
-			"settings": {
-				"foreground": "#B2CCD6"
-			}
-		},
-		{
-			"name": "Sub-methods",
-			"scope": [
-				"entity.name.module.js",
-				"variable.import.parameter.js",
-				"variable.other.class.js"
-			],
-			"settings": {
-				"foreground": "#FF5370"
-			}
-		},
-		{
 			"name": "Language methods",
 			"scope": [
 				"variable.language"
@@ -211,26 +189,6 @@
 			"settings": {
 				"fontStyle": "italic",
 				"foreground": "#FF5370"
-			}
-		},
-		{
-			"name": "entity.name.method.js",
-			"scope": [
-				"entity.name.method.js"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#82AAFF"
-			}
-		},
-		{
-			"name": "meta.method.js",
-			"scope": [
-				"meta.class-method.js entity.name.function.js",
-				"variable.function.constructor"
-			],
-			"settings": {
-				"foreground": "#82AAFF"
 			}
 		},
 		{
@@ -243,59 +201,12 @@
 			}
 		},
 		{
-			"name": "HTML Attributes",
-			"scope": [
-				"text.html.basic entity.other.attribute-name.html",
-				"text.html.basic entity.other.attribute-name"
-			],
-			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#FFCB6B"
-			}
-		},
-		{
-			"name": "CSS Classes",
-			"scope": [
-				"entity.other.attribute-name.class"
-			],
-			"settings": {
-				"foreground": "#FFCB6B"
-			}
-		},
-		{
 			"name": "CSS ID's",
 			"scope": [
 				"source.sass keyword.control"
 			],
 			"settings": {
 				"foreground": "#82AAFF"
-			}
-		},
-		{
-			"name": "Inserted",
-			"scope": [
-				"markup.inserted"
-			],
-			"settings": {
-				"foreground": "#C3E88D"
-			}
-		},
-		{
-			"name": "Deleted",
-			"scope": [
-				"markup.deleted"
-			],
-			"settings": {
-				"foreground": "#FF5370"
-			}
-		},
-		{
-			"name": "Changed",
-			"scope": [
-				"markup.changed"
-			],
-			"settings": {
-				"foreground": "#C792EA"
 			}
 		},
 		{
@@ -628,7 +539,7 @@
 		{
 			"name": "Q3Functions",
 			"scope": [
-				"q3.functions"
+				"support.function.quests.q3"
 			],
 			"settings": {
 				"foreground": "#fde79c"
@@ -637,7 +548,7 @@
 		{
 			"name": "EventClasses",
 			"scope": [
-				"EventClasses"
+				"support.class.mc.events.q3"
 			],
 			"settings": {
 				"foreground": "#ffbb00"
@@ -646,13 +557,21 @@
 		{
 			"name": "Enums",
 			"scope": [
-				"Enums"
+				"support.type.mc.q3"
 			],
 			"settings": {
 				"foreground": "#e1adfa"
 			}
-			
-		}
-		
+		},
+		{
+			"name": "Entity Name Class,entity Name Type Class",
+			"scope": [
+			  "entity.name.class",
+			  "entity.name.type.class"
+			],
+			"settings": {
+			  "foreground": "#E5C07B"
+			}
+		  },
 	]
 }

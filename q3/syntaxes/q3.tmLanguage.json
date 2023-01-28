@@ -3,54 +3,58 @@
 	"name": "q3",
 	"patterns": [
 		{
-			"include": "#comments"
+			"include": "#code"
 		},
 		{
-			"include": "#variable"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#Enums"
-		},
-		{
-			"include": "#Q3Functions"
-		},
-		{
-			"include": "#Q3EventClasses"
-		},
-		{
-			"include": "#int"
-		},
-		{
-			"include": "#strings"
+			"include": "#libs"
 		}
-		
 	],
 	"repository": {
+		"code": {
+			"patterns": [
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#class"
+				},
+				{
+					"include": "#int"
+				},
+				{
+					"include": "#strings"
+				},
+				{
+					"include": "#function-member"
+				},
+				{
+					"include": "#function-call"
+				},
+				{
+					"include": "#member-variables"
+				},
+				{
+					"include": "#operators"
+				}
+			]
+		},
+		"libs": {
+			"patterns":[
+				{
+					"include": "#mc.enums"
+				},
+				{
+					"include": "#quests.functions"
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.control.q3",
-				"match": "\\b(class|enum|extends|if|else|while|do|for|foreach|break|continue|return|throw|sleep|instanceof|wait|key|nf|want|fork|null|true|false|this|ctask|match|case|default|try|catch|finally|static|public|private|protected|const|abstract|final)\\b"
-			}]
-		},
-		"Enums": {
-			"patterns": [{
-				"name": "Enums.q3",
-				"match": "\\b(Achievement|ActiveEffect|AnvilActionType|AttachedFace|Axis|AxolotlType|BarColor|BarFlag|BarStyle|BeeContainerType|BellAttachment|Block|BossBar|Box|catType|ChestAttachement|Color|ComparatorMode|ConsoleSender|DamageCause|DragonPhase|DripleafTilt|DripstoneThickness|Effect|Enchant|Face|FoxType|FurnanceType|GameMode|HeadType|HorseColor|HorseStyle|IllagerSpell|Inventory|ItemFlag|JobType|LlamaType|Loc|LogginLevel|MooshroomType|MouseKey|MushroomBlockType|PaintingType|PandaGene|ParrotType|Particle|Pattern|PatternType|PermissionLevel|PickupPolicy|PlayerJob|PlayerProfile|PotionType|PriveCalculator|QuickFlashEvent|RabbitType|RailShape|RegionFlag|RegionOwnerRole|RegionType|ReloadFilesEvent|RestartServiceEvent|Rotation|Scroll|Sex|SharedBalance|SidebarModule|Skill|SkillType|SlabType|Sound|StairShape|ToolType|TropicalFishPattern|VillagerProfession|WoodType|Item)\\b"
-			}]
-		},
-		"Q3Functions": {
-			"patterns": [{
-				"name": "q3.functions.q3",
-				"match": "\\b(npc|p|ps|region|setSidebarMsg|talk|answer|setDeadline|sleep|online|giveTempItem|giveItem|checkCollab|sendInfo|waitUntilNearby|npc.acceptItem|waitAsync|thenApply|listen|repeat|delay|waitAll|waitAny|nfAll|nfAny|rndOffsetLoc|QResult|makeProgress|talkBetweenNpcs|think|waitUntilFar|tp|setRespawnPoint|setTracker)\\b"
-			}]
-		},
-		"Q3EventClasses": {
-			"patterns": [{
-				"name": "EventClasses.q3",
-				"match": "\\b(AnvilEnchant|BedEnter|BedEnterS|BlockBreak|BlockbreakS|BlockClick|BlockClickS|BlockPlace|BlockPlaceS|BucketEmpty|BucketEmtpyS|BucketFill|BucketFillS|EntityClick|EntityClickS|EntityDamage|EntityDamageS|EntityDeath|EntityDeathS|Event|ItemDrop|ItemDropS|PlayerChat|PlayerChatS|PlayerCraft|PlayerEatS|PlayerEat|PlayerJoin|PlayerPermsChange|PlayerQuit|PlayerTeleport|PlayerTeleportS|ProjectileHit|ProjectileHitS|ScrollUse|ScrollUseS|Tick|TickS)\\b"
+				"name": "keyword.q3",
+				"match": "\\b(class|enum|new|extends|if|else|while|do|for|foreach|break|continue|return|throw|sleep|instanceof|wait|key|nf|want|fork|null|true|false|this|ctask|match|case|default|try|catch|finally|static|public|private|protected|const|abstract|final)\\b"
 			}]
 		},
 		"strings": {
@@ -60,7 +64,11 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.q3",
-					"match": "\\\\."
+					"match": "(\\\\.|\\@[\\^\\w]+)"
+				},
+				{
+					"name": "constant.rgb-value",
+					"match": "§[abcdefklmnor0-9]{1}"
 				}
 			]
 		},
@@ -79,10 +87,138 @@
 							"name": "comment.line.double-slash.q3"
 						}
 					},
-					"match": "((#).*)$"
+					"match": "((#)[^\\'\\\"\\n].*)$"
 				}
 			]
-		}		
+		},
+		"function-call": {
+			"begin": "([A-Za-z_][\\w$]*)\\s*(\\()",
+			"beginCaptures": {
+				"1": {
+					"name": "entity.name.function.q3",
+					"patterns": [
+						{
+							"include": "#quests.functions"
+						}
+					]
+				},
+				"2": {
+					"name": "punctuation.definition.parameters.begin.bracket.round.q3"
+				}
+			},
+			"end": "\\)",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.parameters.end.bracket.round.q3"
+				}
+			},
+			"name": "meta.function.q3",
+			"patterns": [
+				{
+					"include": "#constructor-parameters"
+				},
+				{
+					"include": "#code"
+				},
+				{
+					"include": "#libs"
+				}
+			]
+		},
+		"function-member": {
+			"begin": "(\\$)([A-Za-z_][\\w$]*)\\s*(\\()",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.operator.q3"
+				},
+				"2": {
+					"name": "entity.name.function.q3"
+				},
+				"3": {
+					"name": "punctuation.definition.parameters.begin.bracket.round.q3"
+				}
+			},
+			"end": "\\)",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.parameters.end.bracket.round.q3"
+				}
+			},
+			"name": "meta.function.q3",
+			"patterns": [
+				{
+					"include": "#code"
+				}
+			]
+		},
+		"class": {
+			"begin": "(class!?|enum)?\\s+([A-Z][\\w$]*)\\s*(\\()",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.q3"
+				},
+				"2": {
+					"name": "entity.name.class.q3",
+					"patterns": [
+						{
+							"include": "#mc.events.classes"
+						}
+					]
+				},
+				"3": {
+					"name": "punctuation.definition.parameters.begin.bracket.round.q3"
+				}
+			},
+			"end": "\\)",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.parameters.end.bracket.round.q3"
+				}
+			},
+			"name": "meta.type.name.q3",
+			"patterns": [
+				{
+					"include": "#constructor-parameters"
+				},
+				{
+					"name": "variable.parameter.q3",
+					"match": "[a-z_]+"
+				},
+				{
+					"include": "#code"
+				}
+			]
+		},
+		"member-variables": {
+			"match": "((@)[A-Za-z_$][\\w$]*)",
+			"name": "variable.other.q3"
+		},
+		"constructor-parameters": {
+			"name": "variable.parameter.q3",
+			"match": "([A-Za-z]+:)"
+		},
+		"operators": {
+			"name": "keyword.operator.q3",
+			"match": "(\\$|\\@|\\+|\\-|\\*|\\/|\\%|=|\\+\\=|\\-\\=|\\*\\=|\\/\\=|\\%\\=|<<=|>>=|>>>=|&=|\\|=|\\^=|!|==|\\\"=|\\|\\||&&|\\||&|\\^|~|<|>|<=|>=|=>|!=>|->|>>|>>>|<<|\\?|:|_)"
+		},
+		"mc.enums": {
+			"patterns": [{
+				"name": "support.type.mc.q3",
+				"match": "\\b(M|Achievement|ActiveEffect|AnvilActionType|AttachedFace|Axis|AxolotlType|BarColor|BarFlag|BarStyle|BeeContainerType|BellAttachment|Block|BossBar|Box|catType|ChestAttachement|Color|ComparatorMode|ConsoleSender|DamageCause|DragonPhase|DripleafTilt|DripstoneThickness|Effect|Enchant|Face|FoxType|FurnanceType|GameMode|HeadType|HorseColor|HorseStyle|IllagerSpell|Inventory|ItemFlag|JobType|LlamaType|Loc|LogginLevel|MooshroomType|MouseKey|MushroomBlockType|PaintingType|PandaGene|ParrotType|Particle|Pattern|PatternType|PermissionLevel|PickupPolicy|PlayerJob|PlayerProfile|PotionType|PriveCalculator|QuickFlashEvent|RabbitType|RailShape|RegionFlag|RegionOwnerRole|RegionType|ReloadFilesEvent|RestartServiceEvent|Rotation|Scroll|Sex|SharedBalance|SidebarModule|Skill|SkillType|SlabType|Sound|StairShape|ToolType|TropicalFishPattern|VillagerProfession|WoodType|Item)\\b"
+			}]
+		},
+		"quests.functions": {
+			"patterns": [{
+				"name": "support.function.quests.q3",
+				"match": "\\b(npc|p|ps|region|setSidebarMsg|talk|answer|setDeadline|sleep|online|giveTempItem|giveItem|checkCollab|sendInfo|waitUntilNearby|npc.acceptItem|waitAsync|thenApply|listen|repeat|delay|waitAll|waitAny|nfAll|nfAny|rndOffsetLoc|QResult|makeProgress|talkBetweenNpcs|think|waitUntilFar|tp|setRespawnPoint|setTracker|toLoc|toBlock)\\b"
+			}]
+		},
+		"mc.events.classes": {
+			"patterns": [{
+				"name": "support.class.mc.events.q3",
+				"match": "\\b(AnvilEnchant|BedEnter|BedEnterS|BlockBreak|BlockbreakS|BlockClick|BlockClickS|BlockPlace|BlockPlaceS|BucketEmpty|BucketEmtpyS|BucketFill|BucketFillS|EntityClick|EntityClickS|EntityDamage|EntityDamageS|EntityDeath|EntityDeathS|Event|ItemDrop|ItemDropS|PlayerChat|PlayerChatS|PlayerCraft|PlayerEatS|PlayerEat|PlayerJoin|PlayerPermsChange|PlayerQuit|PlayerTeleport|PlayerTeleportS|ProjectileHit|ProjectileHitS|ScrollUse|ScrollUseS|Tick|TickS)\\b"
+			}]
+		}
 	},
 	"scopeName": "source.q3"
 }
