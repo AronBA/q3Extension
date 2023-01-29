@@ -26,6 +26,18 @@ All notable changes to the "q3" extension will be documented in this file.
 
 - updated quest functions
 
-## [unreleased]
+## 1.4.0
 
-- functions support
+- functions -> lowercase first letter + ()
+- classes -> uppercase first letter + ()
+- operator highlighting
+- constructor parameters -> Foo(**e**: bar, **allow**: false)
+- member variables, prefixed with '@'
+- variables within strings, denoted with '@'
+- color codes within strings, denoted with '§'
+- "new" keyword for anonymous classes
+- highlight library functions/classes/variables
+
+## [todo]
+- add natlib/stdlib types
+- add missing mc lib types
