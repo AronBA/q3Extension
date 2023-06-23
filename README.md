@@ -1,47 +1,19 @@
-# Q3 Extension
-![logo](img/syntax.png)
-<br>
-VS Code Extension for Q3 Language Support and Syntax highlighting.
-If there are any problems write an Issue in this repository.
- 
-# Features
-This Extensions adds the q3 Theme into VS Code. It highlights following things:
+<h1 id="title" align="center">q3 Extension</h1>
 
-- Keywords like if
-- ENUMS from the Minecraft API like Item
-- Q3 Quest functions like Talk
-- Event Classes like BlockClick
-- Strings
-- Integers
-- Comments
+<p align="center"><img src="https://raw.githubusercontent.com/AronBA/q3Extension/master/img/syntax.png" alt="project-image"></p>
 
-# How to install
-Download the extension from the Vs Code Extensions explorer. 
-### or
-Download the vsix file from this project and put in in your %userprofile%/.vscode/extensions folder.
-### or
-Download the extension from the Extension Markedplace.
+<p id="description">a Visual Studio Code extension for Q3</p>
 
+<h2>Project Screenshots:</h2>
 
-# Examples
-## Before: 
+<img src="https://raw.githubusercontent.com/AronBA/q3Extension/master/img/2023-06-23T03%3A41%3A53%2C129434860%2B02%3A00.png" alt="project-screenshot" width="800" height="400/">
 
- [![Screenshot #1.2](img/sco1.png)](img/sco1.png)
- [![Screenshot #3.2](img/sco3.png)](img/sco3.png)
- [![Screenshot #2.1](img/sc2.png)](img/sc2.png)
+<img src="https://raw.githubusercontent.com/AronBA/q3Extension/master/img/2023-06-23T03%3A41%3A14%2C480051835%2B02%3A00.png" alt="project-screenshot" width="800" height="400/">
 
-
-## After: 
-<br/>
-
-[![Screenshot #1.1](img/sc1.png)](images/sc1.png)
-[![Screenshot #3.1](img/sc3.png)](img/sc3.png)
-[![Screenshot #2.2](img/sco2.png)](img/sco2.png)
-
-
-
-
-
-
-
+<h2>Installation Steps:</h2>
+<p>Download the extension from the Vs Code Extensions explorer.</p>
+<p> or </p>
+<p>Download the vsix file from this project and put in in your %userprofile%/.vscode/extensions folder.</p>
+<p> or </p>
+<p>Download the extension from the Extension Marketplace.</p>
 
