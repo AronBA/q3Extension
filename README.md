@@ -1,4 +1,4 @@
-# Q3 Language Support for VS Code
+# Q3 Language Support for VS Code [WIP]
 
 ![alt text](logo.png "Title")
 
