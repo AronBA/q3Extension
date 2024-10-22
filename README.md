@@ -45,7 +45,7 @@ To run the extension in development mode:
 3. Open the project in VS Code.
 4. Press `F5` to open a new VS Code window with the extension loaded.
 
-For contributing to the Q3 LSP (Java), please refer to the LSP repository.
+For contributing to the Q3 LSP (Java), please refer to the ![lsp4q3](https://github.com/AronBA/LSP4Q3) repository.
 
 ## Known Issues
 
