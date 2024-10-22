@@ -1,7 +1,3 @@
-Here is a README file for your VS Code extension:
-
----
-
 # Q3 Language Support for VS Code
 
 This Visual Studio Code extension adds grammar and syntax highlighting for the Q3 language and provides Language Server Protocol (LSP) support. The LSP support is powered by a server written in Java.
