@@ -1,0 +1,73 @@
+  {
+    "name": "q3extension",
+    "displayName": "Q3 (Syntax Highlighting)",
+    "description": "Syntax highlighting for Q3.",
+    "version": "1.4.0",
+    "publisher": "GreenWylf",
+    "icon": "logo.png",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/AronBA/q3Extension.git"
+    },
+    "engines": {
+      "vscode": "^1.93.0"
+    },
+    "categories": [
+      "Themes",
+      "Programming Languages"
+    ],
+    "activationEvents": [
+      "onLanguage:q3"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+      "themes": [
+        {
+          "label": "q3",
+          "uiTheme": "vs-dark",
+          "path": "./themes/q3-color-theme.json"
+        }
+      ],
+      "languages": [
+        {
+          "id": "q3",
+          "extensions": [
+            ".q3"
+          ],
+          "aliases": [
+            "q3"
+          ],
+          "configuration": "./configurations/q3-language-configuation.json"
+        }
+      ],
+      "grammars": [
+        {
+          "language": "q3",
+          "scopeName": "source.q3",
+          "path": "./syntaxes/q3.tmLanguage.json"
+        }
+      ]
+    },
+  "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile && npm run lint",
+      "lint": "eslint src",
+      "test": "vscode-test"
+    },
+    "devDependencies": {
+      "@types/mocha": "^10.0.7",
+      "@types/node": "20.x",
+      "@types/vscode": "^1.93.0",
+      "@typescript-eslint/eslint-plugin": "^8.3.0",
+      "@typescript-eslint/parser": "^8.3.0",
+      "@vscode/test-cli": "^0.0.10",
+      "@vscode/test-electron": "^2.4.1",
+      "eslint": "^9.9.1",
+      "typescript": "^5.5.4"
+    },
+    "dependencies": {
+      "vscode-languageclient": "^9.0.1"
+    }
+  }
