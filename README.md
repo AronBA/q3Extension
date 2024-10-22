@@ -58,13 +58,9 @@ For contributing to the Q3 LSP (Java), please refer to the LSP repository.
 - Added syntax highlighting for Q3 files.
 - Integrated with Q3 LSP server for basic language features.
 
----
-
 ## License
 
 MIT License. See [LICENSE](LICENSE) for more details.
-
----
 
 ## Contribution
 
