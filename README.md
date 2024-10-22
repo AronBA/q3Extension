@@ -1,5 +1,7 @@
 # Q3 Language Support for VS Code
 
+![alt text](logo.png "Title")
+
 This Visual Studio Code extension adds grammar and syntax highlighting for the Q3 language and provides Language Server Protocol (LSP) support. The LSP support is powered by a server written in Java.
 
 ## Features
