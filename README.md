@@ -65,7 +65,3 @@ MIT License. See [LICENSE](LICENSE) for more details.
 ## Contribution
 
 Contributions are welcome! Feel free to submit pull requests or open issues for any feature requests or bugs.
-
----
-
-This README provides a high-level overview of the VS Code extension and instructions for users and developers alike.
