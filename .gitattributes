@@ -1,7 +1,0 @@
-# Markdown
-*.md linguist-detectable=true
-*.md linguist-documentation=false
-
-#Json
-*.json linguist-detectable=true
-*.json linguist-documentation=false
